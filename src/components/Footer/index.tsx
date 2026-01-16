@@ -8,17 +8,13 @@ import {
   FooterColumn,
   FooterTitle,
   FooterText,
-  FooterLink,
   StyledLink,
   FooterBottom,
   Copyright,
   LegalLinks,
-  LegalLink,
   StyledLegalLink,
   ContactInfo,
-  ContactItem,
-  SupportNote,
-  TelegramButton
+  ContactItem
 } from './styles';
 
 const Footer: React.FC = () => {
