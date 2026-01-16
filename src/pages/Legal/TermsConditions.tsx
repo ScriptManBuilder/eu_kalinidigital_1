@@ -81,7 +81,7 @@ const TermsConditions: React.FC = () => {
           
           <SubTitle>3.3 Communication</SubTitle>
           <Paragraph>
-            Official support and communication are conducted exclusively through our Telegram support channel: {config.telegramBot}
+            Official support and communication are conducted exclusively through our designated support channels. Please use the contact form on our website for all inquiries.
           </Paragraph>
         </Section>
 
@@ -246,7 +246,7 @@ const TermsConditions: React.FC = () => {
             Registered Address: {config.address}<br />
             Phone: {config.phoneNumber}<br />
             Email: {config.supportEmail}<br />
-            Telegram Support: {config.telegramBot}<br />
+            For support inquiries, please use the contact form on our website.<br />
             Director: {config.owner}
           </Paragraph>
         </ContactInfo>

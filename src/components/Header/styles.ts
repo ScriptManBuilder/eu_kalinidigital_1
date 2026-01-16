@@ -59,10 +59,21 @@ export const Nav = styled.nav<{ isOpen: boolean }>`
     right: 0;
     background-color: ${props => props.theme.colors.background};
     flex-direction: column;
-    padding: ${props => props.theme.spacing.lg};
+    padding: ${props => props.theme.spacing.sm} 0;
     border-bottom: 1px solid ${props => props.theme.colors.border};
     display: ${props => props.isOpen ? 'flex' : 'none'};
-    gap: ${props => props.theme.spacing.md};
+    gap: 0;
+    box-shadow: ${props => props.theme.shadows.small};
+    align-items: center;
+  }
+`;
+
+export const NavLinkWrapper = styled.div`
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -90,6 +101,32 @@ export const NavLink = styled.a`
   &:hover::after {
     width: 100%;
   }
+
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    display: inline-block;
+    width: auto;
+    padding: ${props => props.theme.spacing.sm} ${props => props.theme.spacing.xl};
+    font-size: 0.95rem;
+    text-align: center;
+    border-bottom: 1px solid ${props => props.theme.colors.border};
+    
+    &::after {
+      display: none;
+    }
+  }
+
+  .desktop-only {
+    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+      display: none;
+    }
+  }
+
+  .mobile-only {
+    display: none;
+    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+      display: inline;
+    }
+  }
 `;
 
 export const CTAButton = styled.button`
@@ -98,15 +135,20 @@ export const CTAButton = styled.button`
   padding: ${props => props.theme.spacing.sm} ${props => props.theme.spacing.lg};
   font-size: 1rem;
   transition: all ${props => props.theme.transitions.medium};
+  border-radius: 4px;
 
   &:hover {
     background-color: ${props => props.theme.colors.primary};
     transform: translateY(-2px);
   }
 
-  @media (max-width: ${props => props.theme.breakpoints.mobileL}) {
-    padding: ${props => props.theme.spacing.xs} ${props => props.theme.spacing.md};
-    font-size: 0.9rem;
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    width: 90%;
+    max-width: 300px;
+    padding: ${props => props.theme.spacing.sm} ${props => props.theme.spacing.lg};
+    font-size: 0.95rem;
+    margin: ${props => props.theme.spacing.sm} auto;
+    display: block;
   }
 `;
 
@@ -127,6 +169,17 @@ export const Dropdown = styled.div`
   &:hover > div {
     display: block;
   }
+
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &:hover > div {
+      display: block;
+    }
+  }
 `;
 
 export const DropdownContent = styled.div`
@@ -139,7 +192,21 @@ export const DropdownContent = styled.div`
   box-shadow: ${props => props.theme.shadows.medium};
   border: 1px solid ${props => props.theme.colors.border};
   margin-top: ${props => props.theme.spacing.sm};
-  z-index: 1000;
+  z-index: 1001;
+  border-radius: 4px;
+  overflow: hidden;
+
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    position: static;
+    display: block;
+    box-shadow: none;
+    border: none;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    background-color: ${props => props.theme.colors.beige};
+    border-radius: 0;
+  }
 `;
 
 export const DropdownItem = styled.a`
@@ -147,9 +214,37 @@ export const DropdownItem = styled.a`
   padding: ${props => props.theme.spacing.sm} ${props => props.theme.spacing.md};
   color: ${props => props.theme.colors.text};
   transition: all ${props => props.theme.transitions.fast};
+  text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     background-color: ${props => props.theme.colors.beige};
     color: ${props => props.theme.colors.primary};
+  }${props => props.theme.spacing.sm} ${props => props.theme.spacing.md};
+    font-size: 0.9rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05.md};
+    font-size: 0.85rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+`;
+
+export const ServiceLabel = styled.span`
+  .desktop-only {
+    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+      display: none;
+    }
+  }
+
+  .mobile-only {
+    display: none;
+    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+      display: inline;
+    }
   }
 `;

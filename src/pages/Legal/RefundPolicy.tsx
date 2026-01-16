@@ -224,7 +224,7 @@ const RefundPolicy: React.FC = () => {
             To request a refund:
           </Paragraph>
           <List>
-            <li>Contact us via official Telegram support: {config.telegramBot}</li>
+            <li>Contact us via our official support channels</li>
             <li>Provide your project/service details and invoice number</li>
             <li>Explain the reason for the refund request</li>
             <li>Allow up to 10 business days for review</li>
@@ -285,7 +285,7 @@ const RefundPolicy: React.FC = () => {
             {config.address}<br />
             Phone: {config.phoneNumber}<br />
             Email: {config.supportEmail}<br />
-            Telegram Support: {config.telegramBot}
+            For support inquiries, please use the contact form on our website.
           </Paragraph>
         </ContactInfo>
       </ContentSection>

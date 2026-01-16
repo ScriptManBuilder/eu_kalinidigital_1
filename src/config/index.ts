@@ -7,5 +7,7 @@ export const config = {
   supportEmail: process.env.REACT_APP_SUPPORT_EMAIL || 'support@kalinihtadigital.com',
   phoneNumber: process.env.REACT_APP_PHONE_NUMBER || '+44 20 1234 5678',
   telegramBot: process.env.REACT_APP_TELEGRAM_BOT || 'https://t.me/KalinihtaDigitalBot',
-  siteUrl: process.env.REACT_APP_SITE_URL || 'https://www.kalinihtadigital.com'
+  siteUrl: process.env.REACT_APP_SITE_URL || 'https://www.kalinihtadigital.com',
+  telegramBotToken: process.env.REACT_APP_TELEGRAM_BOT_TOKEN || '',
+  telegramChatId: process.env.REACT_APP_TELEGRAM_CHAT_ID || ''
 };

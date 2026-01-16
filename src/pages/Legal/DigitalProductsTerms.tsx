@@ -343,7 +343,7 @@ const DigitalProductsTerms: React.FC = () => {
             {config.address}<br />
             Phone: {config.phoneNumber}<br />
             Email: {config.supportEmail}<br />
-            Telegram Support: {config.telegramBot}
+            For support inquiries, please use the contact form on our website.
           </Paragraph>
         </ContactInfo>
       </ContentSection>

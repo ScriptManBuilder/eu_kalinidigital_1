@@ -56,6 +56,19 @@ export const FooterText = styled.p`
 
 export const FooterLink = styled.a`
   color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  display: block;
+  margin-bottom: ${props => props.theme.spacing.sm};
+  transition: color ${props => props.theme.transitions.medium};
+
+  &:hover {
+    color: ${props => props.theme.colors.accent};
+  }
+`;
+
+export const StyledLink = styled.a`
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
   display: block;
   margin-bottom: ${props => props.theme.spacing.sm};
   transition: color ${props => props.theme.transitions.medium};
@@ -96,6 +109,18 @@ export const LegalLinks = styled.div`
 
 export const LegalLink = styled.a`
   color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color ${props => props.theme.transitions.medium};
+
+  &:hover {
+    color: ${props => props.theme.colors.accent};
+  }
+`;
+
+export const StyledLegalLink = styled.a`
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
   font-size: 0.9rem;
   transition: color ${props => props.theme.transitions.medium};
 

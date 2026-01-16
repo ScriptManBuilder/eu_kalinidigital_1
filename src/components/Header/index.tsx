@@ -43,7 +43,8 @@ const Header: React.FC = () => {
 
           <Dropdown>
             <NavLink as="span" style={{ cursor: 'pointer' }}>
-              Services ▾
+              <span className="desktop-only">Services ▾</span>
+              <span className="mobile-only">Services</span>
             </NavLink>
             <DropdownContent>
               <Link to="/services">

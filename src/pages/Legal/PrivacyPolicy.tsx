@@ -166,7 +166,7 @@ const PrivacyPolicy: React.FC = () => {
             {config.address}<br />
             Phone: {config.phoneNumber}<br />
             Email: {config.supportEmail}<br />
-            Telegram: {config.telegramBot}
+            For inquiries, please use our contact form.
           </Paragraph>
         </ContactInfo>
       </ContentSection>

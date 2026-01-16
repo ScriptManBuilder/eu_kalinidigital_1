@@ -9,10 +9,12 @@ import {
   FooterTitle,
   FooterText,
   FooterLink,
+  StyledLink,
   FooterBottom,
   Copyright,
   LegalLinks,
   LegalLink,
+  StyledLegalLink,
   ContactInfo,
   ContactItem,
   SupportNote,
@@ -38,31 +40,31 @@ const Footer: React.FC = () => {
 
           <FooterColumn>
             <FooterTitle>Services</FooterTitle>
-            <Link to="/services/digital-transformation">
-              <FooterLink as="span">Digital Transformation</FooterLink>
-            </Link>
-            <Link to="/services/business-consulting">
-              <FooterLink as="span">Business Consulting</FooterLink>
-            </Link>
-            <Link to="/services/it-solutions">
-              <FooterLink as="span">IT Solutions</FooterLink>
-            </Link>
-            <Link to="/services/cloud-services">
-              <FooterLink as="span">Cloud Services</FooterLink>
-            </Link>
-            <Link to="/services">
-              <FooterLink as="span">View All Services →</FooterLink>
-            </Link>
+            <StyledLink as={Link} to="/services/digital-transformation">
+              Digital Transformation
+            </StyledLink>
+            <StyledLink as={Link} to="/services/business-consulting">
+              Business Consulting
+            </StyledLink>
+            <StyledLink as={Link} to="/services/it-solutions">
+              IT Solutions
+            </StyledLink>
+            <StyledLink as={Link} to="/services/cloud-services">
+              Cloud Services
+            </StyledLink>
+            <StyledLink as={Link} to="/services">
+              View All Services →
+            </StyledLink>
           </FooterColumn>
 
           <FooterColumn>
             <FooterTitle>Company</FooterTitle>
-            <Link to="/about">
-              <FooterLink as="span">About Us</FooterLink>
-            </Link>
-            <Link to="/contact">
-              <FooterLink as="span">Contact</FooterLink>
-            </Link>
+            <StyledLink as={Link} to="/about">
+              About Us
+            </StyledLink>
+            <StyledLink as={Link} to="/contact">
+              Contact
+            </StyledLink>
             <FooterText style={{ marginTop: '1rem' }}>
               <strong>Director:</strong><br />
               {config.owner}
@@ -85,18 +87,6 @@ const Footer: React.FC = () => {
                 <span>{config.supportEmail}</span>
               </ContactItem>
             </ContactInfo>
-
-            <SupportNote>
-              <FooterText style={{ marginBottom: '0.5rem' }}>
-                <strong>Official Support Channel:</strong>
-              </FooterText>
-              <FooterText style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}>
-                All customer support requests must be handled via our official Telegram support bot.
-              </FooterText>
-              <TelegramButton href={config.telegramBot} target="_blank" rel="noopener noreferrer">
-                Contact Support on Telegram
-              </TelegramButton>
-            </SupportNote>
           </FooterColumn>
         </FooterTop>
 
@@ -105,18 +95,18 @@ const Footer: React.FC = () => {
             © {currentYear} {config.companyName}. All rights reserved. | Registered in {config.country}
           </Copyright>
           <LegalLinks>
-            <Link to="/privacy-policy">
-              <LegalLink as="span">Privacy Policy</LegalLink>
-            </Link>
-            <Link to="/terms-conditions">
-              <LegalLink as="span">Terms & Conditions</LegalLink>
-            </Link>
-            <Link to="/refund-policy">
-              <LegalLink as="span">Refund Policy</LegalLink>
-            </Link>
-            <Link to="/digital-products-terms">
-              <LegalLink as="span">Digital Products Terms</LegalLink>
-            </Link>
+            <StyledLegalLink as={Link} to="/privacy-policy">
+              Privacy Policy
+            </StyledLegalLink>
+            <StyledLegalLink as={Link} to="/terms-conditions">
+              Terms & Conditions
+            </StyledLegalLink>
+            <StyledLegalLink as={Link} to="/refund-policy">
+              Refund Policy
+            </StyledLegalLink>
+            <StyledLegalLink as={Link} to="/digital-products-terms">
+              Digital Products Terms
+            </StyledLegalLink>
           </LegalLinks>
         </FooterBottom>
       </FooterContainer>
