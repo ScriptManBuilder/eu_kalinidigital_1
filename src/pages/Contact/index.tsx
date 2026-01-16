@@ -27,10 +27,6 @@ import {
   ContactDetails,
   ContactLabel,
   ContactValue,
-  TelegramBox,
-  TelegramTitle,
-  TelegramText,
-  TelegramButton,
   MapSection
 } from './styles';
 
